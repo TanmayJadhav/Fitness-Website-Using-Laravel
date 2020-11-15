@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UserAuthenticateController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +21,18 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::view("product_gym_equipments",'product_gym_equipments');
-Route::view("product_nutrition",'product_nutrition');
-Route::view("product_gym_accessories",'product_gym_accessories');
-Route::view("product_gym_clothing",'product_gym_clothing');
+
+
+Route::post('register',[UserAuthenticateController::class,'post_register']);
+Route::post('login',[UserAuthenticateController::class,'post_login']);
+
+Route::get('product_nutrition',[ProductController::class,'get_product_nutrition']);
+Route::get('product_gym_equipments',[ProductController::class,'get_product_gym_equipments']);
+Route::get('product_gym_accessories',[ProductController::class,'get_product_gym_accessories']);
+Route::get('product_gym_clothing',[ProductController::class,'get_product_gym_clothing']);
+
+
+Route::post('/payment/status', [OrderController::class,'paymentCallback'])->name('status');
+Route::get('/payment', [OrderController::class,'order']);
+
+

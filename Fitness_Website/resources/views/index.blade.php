@@ -146,7 +146,8 @@
   <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="..." aria-hidden="true">
     <div class="modal-dialog modal-login modal-dialog-centered">
         <div class="modal-content">
-            <form action="/examples/actions/confirmation.php" method="post">
+            <form action = '/login' method="post">
+                @csrf
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -154,11 +155,11 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" required="required">
+                        <input type="email" class="form-control" name="email" required="required">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" required="required">
+                        <input type="password" class="form-control" name="password" required="required">
                     </div>
                     <div class="justify-content-between">
                         <div class="clearfix">
@@ -198,7 +199,8 @@
 <div id="myModal1" class="modal fade">
     <div class="modal-dialog modal-login modal-dialog-centered">
         <div class="modal-content">
-            <form action="/examples/actions/confirmation.php" method="post">
+            <form  action = '/register' method="post">
+              @csrf
                 <div class="modal-header">
                     <h4 class="modal-title">Sign Up</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -206,7 +208,7 @@
                 <div class="modal-body">
 
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" placeholder="Username" required="required" id="username" name="username">
                     </div>
 
                     <!-- <div class="form-group">
@@ -214,8 +216,8 @@
                     </div> -->
 
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Email">
+                        <input type="email" class="form-control" id="email"
+                            aria-describedby="emailHelp" placeholder="Email" required="required" name="email" >
                         <!-- <small id="emailHelp" class="form-text text-muted">A password will be sent to your email
                             address.</small> -->
                     </div>
@@ -225,16 +227,14 @@
                             <!-- <label>Password</label> -->
                             <!-- <a href="#" class="float-right text-muted"><small>Forgot?</small></a> -->
                         </div>
-                        <input type="password" class="form-control" required="required" placeholder="Password">
+                        <input type="password" class="form-control" required="required" required="required" id="password1" name="password1" placeholder="Password">
                     </div>
 
                     <div class="form-group">
                         <input type="password" class="form-control" required="required"
-                            placeholder="Confirm Password">
+                            placeholder="Confirm Password" name="password2" name="password2">
                     </div>
-                    <div class="form-group">
-                        <label class="form-check-label"><input type="checkbox"> Remember me</label><br>
-                    </div>
+                   
                 </div>
                 <div class="modal-footer justify-content-between">
                     <input type="submit" class="btn btn-primary" value="SignUp">
