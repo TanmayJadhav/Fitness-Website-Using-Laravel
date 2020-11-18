@@ -45,3 +45,5 @@ Route::get('product_description/{id}',[ProductController::class,'get_product_des
 Route::get('nutrition_blog',[BlogController::class,'get_nutrition_blog']);
 Route::get('weight_loss_blog',[BlogController::class,'get_weight_loss_blog']);
 Route::get('fitness_blog',[BlogController::class,'get_fitness_blog']);
+
+Route::get('blog_description/{id}',[BlogController::class,'get_blog_description']);

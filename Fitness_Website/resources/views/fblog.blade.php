@@ -8,24 +8,24 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="bootstrap/boot/css/bootstrap.min.css" type="text/css"> -->
+        <!-- <link rel="stylesheet" href="bootstrap-4.0.0/assets/css/docs.min.css" type="text/css"> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+
+
   <title>Fitness Blog </title>
 
-  <!-- Bootstrap core CSS -->
  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-  <!-- Custom styles for this template -->
+ 
   <link href="css/blog-home.css" rel="stylesheet">
   <style>
      html {
@@ -53,36 +53,36 @@
 
 <body>
 
-<nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark ">
-    <a class="navbar-brand" href="#"><img src="images\index\bestrong.png" width="150px" height="60px"
-        alt="Responsive image"></a>
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark ">
+        <a class="navbar-brand" href="/"><img src="images\index\bestrong.png" width="150px" height="60px"
+            alt="Responsive image"></a>
 
-    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
-      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
-   
+    
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav py-1 ml-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav py-1 ml-auto">
 
-        <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="/"><i class="fas fa-home"></i> Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="fitness_blog"><i class="fab fa-blogger"></i> Blog</a>
-        </li>
+            <li class="nav-item active">
+            <a class="nav-link px-3 zoom" href="/"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item active">
+            <a class="nav-link px-3 zoom" href="fitness_blog"><i class="fab fa-blogger"></i> Blog</a>
+            </li>
 
-        <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="product_nutrition"><i class="fas fa-store"></i> Products</a>
-        </li>
+            <li class="nav-item active">
+            <a class="nav-link px-3 zoom" href="product_nutrition"><i class="fas fa-store"></i> Products</a>
+            </li>
 
-        
-      </ul>
-    </div>
-  </nav>
+            
+        </ul>
+        </div>
+    </nav>
 
 
   <!-- Page Content -->
@@ -104,7 +104,7 @@
           <div class="card-body">
             <h2 class="card-title">{{$blog->name}} </h2>
             <p class="card-text">{{$blog->brief}}</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <a href="http://127.0.0.1:8000/blog_description/{{$blog->id}}" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on {{$blog->date}} by

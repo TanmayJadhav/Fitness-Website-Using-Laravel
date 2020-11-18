@@ -54,7 +54,7 @@
 <body>
 
 <nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark ">
-    <a class="navbar-brand" href="#"><img src="images\index\bestrong.png" width="150px" height="60px"
+    <a class="navbar-brand" href="/"><img src="images\index\bestrong.png" width="150px" height="60px"
         alt="Responsive image"></a>
 
     <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
@@ -104,7 +104,7 @@
           <div class="card-body">
             <h2 class="card-title">{{$blog->name}} </h2>
             <p class="card-text">{{$blog->brief}}</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <a href="http://127.0.0.1:8000/blog_description/{{$blog->id}}" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on {{$blog->date}} by

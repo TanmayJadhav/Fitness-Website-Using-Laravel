@@ -28,4 +28,13 @@ class BlogController extends Controller
         return view('wblog',compact('blogs'));
         
     }
+
+
+    public function get_blog_description($id){
+        
+        $blog = Blog::find($id);
+        
+        return view('blog_description',compact('blog'));
+        
+    }
 }
