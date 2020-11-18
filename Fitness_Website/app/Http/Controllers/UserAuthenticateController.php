@@ -8,7 +8,11 @@ use Auth;
 use Illuminate\Http\Request;
 
 class UserAuthenticateController extends Controller
-{
+{   
+   
+    
+
+
      // Post Request on login page
     public function post_login(Request $request){
         $email      =   $request->input('email');
@@ -19,7 +23,7 @@ class UserAuthenticateController extends Controller
             return redirect('/product_nutrition');
         }
         else{
-            return redirect('/');
+            return redirect()->back()->with('alert','Login Details Not Found. Please Signup First');
         }
         
     }
@@ -29,12 +33,13 @@ class UserAuthenticateController extends Controller
         
         $name       =   $request->input('username');
         $email      =   $request->input('email');
+        $ph_number  =   $request->input('ph_number');
 
         if($request->input('password1')==$request->input('password2'))
         {
             $password   =   PASSWORD_HASH($request->input('password1'),PASSWORD_BCRYPT);
 
-            if(User::create(['name'=>$name,'email'=>$email,'password'=>$password]))
+            if(User::create(['name'=>$name,'email'=>$email,'password'=>$password,'ph_number'=>$ph_number]))
             {
                 return redirect()->back()->with('alert','Sucessfully Registered.Now Please Login To Continue');
             }
@@ -46,8 +51,36 @@ class UserAuthenticateController extends Controller
         else{
             return redirect()->back()->with('alert','Password Incorrect');
         }
-        
-        
+       
+    }
+
+    
+     
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/');
     }
     
+
+
+
+    public function resetpassword(Request $request) {
+        
+        $email      =   $request->input('email');
+        $ph_number  =   $request->input('number');
+        $new_password  =   PASSWORD_HASH($request->input('new_password'),PASSWORD_BCRYPT);
+
+        $user = User::where('email','=',$email )->first();
+        
+        if ($user)
+        {
+            $user->password=$new_password;
+            $user->save();
+            return redirect('/')->with('alert','Password Sucessfully changed');
+        }
+        else{
+            return redirect('/')->with('alert','Credentials Not Found');
+        }
+        
+    }
 }

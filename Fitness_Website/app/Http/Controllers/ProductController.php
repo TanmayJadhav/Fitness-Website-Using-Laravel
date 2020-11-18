@@ -32,4 +32,12 @@ class ProductController extends Controller
         return view('product_gym_clothing',compact('products'));
         
     }
+
+    public function get_product_description($id){
+        $user_logged = Auth()->user();
+        $product_description = Product::find($id);
+        
+        return view('product_description',compact('product_description','user_logged'));
+        
+    }
 }

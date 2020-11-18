@@ -10,7 +10,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <title>FitWorld-Homepage</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+
+
+
+  <title>BeStrong</title>
   <style>
     .zoom:hover {
       -ms-transform: scale(1.2);
@@ -40,65 +53,73 @@
       font-size: 18px;
     }
 
-    
+    .form-control {
+      border: none;
+      border-radius: 20px;
+      background: rgba(165, 147, 69, 0.075);
+      box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2)
+    }
+
+    .container1 img {
+      border: 2px solid transparent;
+      margin-right: 1000px;
+      padding-top: 5px;
+      padding-left: 70px;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 50px;
+
+
+
+    }
+
+    .container1 h2 {
+      font-family: 'Goblin One';
+      text-align: center;
+    }
+
+    .follow {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      background-color: #ffffff;
+
+    }
+
+    .wrapper {
+      text-align: center;
+      font-family: 'Goblin One';
+      font-size: 12px;
+    }
+
+    .follow .fab {
+      padding: 1rem;
+      margin: .5rem;
+      font-size: 2.8rem;
+      color: red;
+    }
+
+    .fab:hover {
+      -ms-transform: scale(1.2);
+      /* IE 9 */
+      -webkit-transform: scale(1.2);
+      /* Safari 3-8 */
+      transform: scale(1.06);
+      color: red;
+      /* background-color: rgba(255, 255, 255, 0.24); */
+      box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5), 0 8px 20px 0 rgba(0, 0, 0, 0.5);
   </style>
 </head>
 
 <body>
+  @if (session('alert'))
+      <div class="alert alert-success">
+          {{ session('alert') }}
+      </div>
+  @endif
 
-
-  <!-- navbar -->
-
-  <!-- <header class="header-section">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="data:image/webp;base64,UklGRqgBAABXRUJQVlA4TJsBAAAvY8AFEPdAmG1U0vO3uOcUBAJJ/rgLLBBIktsfaYEAYcF/pAQJ/qNYAQMOZNutkpdCUcpXkIJRsv99JhQtLiCi/xOAy24i+4I/H0VPmfVtXYc2JzZiTkNdkF21v1mZmScjGlNGjaPUavgFi4jMxsgiEpFvoJPlkAfwmEfk29LpKpe8C8Pdm7YuDWqB4L33d+vuvfcBYN7Vm3kFJtYAVmbmBY/tLZ/XrMbIu/D6SAmkywG6Nm5ATUTkLU9EVAOSyMAsGgCLiMRF7NeI6SPmviSUqhhg1957X12A5Xibdjmej0gHnM4u+SOJnxNDHjF+1Bbj8o1XXHdDZF/jy5ApyQFATYntlwBWM/SpBcD4Nt4jgMWISf56G/TTeEK/ztH1ojEZMOMXBgDBm5fCjwKOm/9UKTccDKXqTxR/oFVU9sZQEhF5ICjqVENnYl7jrOEVUVU39c2R7oHOcA2G4FI2tce4ZDSLRu+M1AAAhUo2FiUinB86dyJANwmuTBj366D3KUUD+3bgOp+Aab8O0N4KwwckNiURuVuPJIzxfQkA"
-                        alt="">
-                </a>
-            </div>
-            <div class="nav-menu">
-                <nav class="mainmenu mobile-menu">
-                    <ul>
-                        <li class=""><a href="./index.html">Home</a></li>
-                        <li><a href="./about-us.html">About</a></li>
-                        <li><a href="./classes.html">Classes</a></li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./gallery.html">Gallery</a></li>
-                        <li><a href="./contact.html">Contacts</a></li>
-                    </ul>
-                </nav>
-                <a href="#" class="primary-btn signup-btn">Sign Up Today</a>
-            </div>
-            <div id="mobile-menu-wrap">
-                <div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0"
-                        class="slicknav_btn slicknav_collapsed" style="outline: none;"><span
-                            class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span
-                                class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span
-                                class="slicknav_icon-bar"></span></span></a>
-                    <nav class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
-                        <ul>
-                            <li class="active"><a href="./index.html" role="menuitem">Home</a></li>
-                            <li><a href="./about-us.html" role="menuitem">About</a></li>
-                            <li><a href="./classes.html" role="menuitem">Classes</a></li>
-                            <li><a href="./blog.html" role="menuitem">Blog</a></li>
-                            <li><a href="./gallery.html" role="menuitem">Gallery</a></li>
-                            <li><a href="./contact.html" role="menuitem">Contacts</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header> -->
-
-  <nav class="navbar navbar-expand-lg bg-dark p-0 py-2 mb-1">
-    <!-- Just an image -->
-    <a class="navbar-brand mx-4" style="width: 100px;height: 60px;" href="index.html">
-      <!-- <img src="logo.jpg" width="100" height="60" class="d-inline-block align-top" alt="" loading="lazy"> -->
-      <h1 class="text-white font-weight-bold">Fitness Club</h1>
-    </a>
-    <!-- <a class="navbar-brand" href="#">
-              </a> -->
+  <nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark ">
+    <a class="navbar-brand" href="#"><img src="images\index\bestrong.png" width="150px" height="60px"
+        alt="Responsive image"></a>
 
     <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
       data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -106,183 +127,200 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- <h1 class="navbar-brand mb-0 h1">Vaasoomart Service</h1>-->
-    <!-- Image and text -->
+   
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav py-1 ml-auto">
 
         <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="index.html">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link px-3 zoom" href="/"><i class="fas fa-home"></i> Home</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="#">About<span class="sr-only">(current)</span></a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="#">Blog<span class="sr-only">(current)</span></a>
+          <a class="nav-link px-3 zoom" href="fitness_blog"><i class="fab fa-blogger"></i> Blog</a>
         </li>
 
-        <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="#">Gallery<span class="sr-only">(current)</span></a>
-        </li>
 
         <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="#">Contacts <span class="sr-only">(current)</span></a>
+          <a class="nav-link px-3 zoom" href="#"><i class="fas fa-address-card"></i> About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link trigger-btn px-3 zoom" data-toggle="modal" href="#myModal">Login</a>
+          <a class="nav-link trigger-btn px-3 zoom" data-toggle="modal" href="#myModal"><i
+              class="fas fa-sign-in-alt"></i> Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link trigger-btn px-3 zoom" data-toggle="modal" href="#myModal1">SignUp</a>
+          <a class="nav-link trigger-btn px-3 zoom" data-toggle="modal" href="#myModal1"><i
+              class="fas fa-sign-in-alt"></i> SignUp</a>
         </li>
+        
+        @if (auth()->user())
+        <li class="nav-item">
+          <a class="nav-link trigger-btn px-3 zoom"  href="/logout"><i
+              class="fas fa-sign-out-alt"></i>Logout</a>
+        </li>
+        @endif
+
 
       </ul>
     </div>
   </nav>
 
+
   <!-- Login Modal -->
   <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="..." aria-hidden="true">
     <div class="modal-dialog modal-login modal-dialog-centered">
-        <div class="modal-content">
-            <form action = '/login' method="post">
-                @csrf
-                <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" name="email" required="required">
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" class="form-control" name="password" required="required">
-                    </div>
-                    <div class="justify-content-between">
-                        <div class="clearfix">
-                            <label class="form-check-label"><input type="checkbox"> Remember me</label>
-                            <a class="float-right" data-toggle="modal" data-target="#myModal2"
-                                data-dismiss="modal"><small>Forgot Password?</small></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="modal-footer justify-content-between">
-                    <label class="form-check-label"><input type="checkbox"> Remember me</label>
-                    <div class="clearfix">
-                        <a class="float-right" data-toggle="modal" data-target="#myModal2"
-                            data-dismiss="modal"><small>Forgot Password?</small></a>
-                    </div>
-                </div> -->
+      <div class="modal-content">
+        <form action='/login' method="post">
+          @csrf
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" name="email" required="required">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" name="password" required="required">
+            </div>
+            <div class="justify-content-between">
+              <div class="clearfix">
+                <a class="float-right" data-toggle="modal" data-target="#myModal2" data-dismiss="modal"><small>Forgot
+                    Password?</small></a>
+              </div>
+            </div>
+          </div>
+          
 
-                <!-- <span class="my-4" style="margin: 0 210px;">
+          <!-- <span class="my-4" style="margin: 0 210px;">
                     <button type="submit" class="btn btn-primary mx-auto">Log in</button>
                 </span> -->
 
-                <div class="modal-footer justify-content-between">
-                    <!-- <label class="form-check-label"><input type="checkbox"> Remember me</label><br> -->
-                    <input type="submit" class="btn btn-primary" value="Login">
-                    <div class="clearfix">
-                        <a class="float-right" data-toggle="modal" data-target="#myModal1"
-                            data-dismiss="modal"><small>New User ? SignUp</small></a>
-                    </div>
-                </div>
+          <div class="modal-footer justify-content-between">
+            <input type="submit" class="btn btn-primary" value="Login">
+            <div class="clearfix">
+              <a class="float-right" data-toggle="modal" data-target="#myModal1" data-dismiss="modal"><small>New User ?
+                  SignUp</small></a>
+            </div>
+          </div>
 
 
-            </form>
-        </div>
+        </form>
+      </div>
     </div>
-</div>
-<!-- Sign up Modal -->
-<div id="myModal1" class="modal fade">
+  </div>
+  <!-- Sign up Modal -->
+  <div id="myModal1" class="modal fade">
     <div class="modal-dialog modal-login modal-dialog-centered">
-        <div class="modal-content">
-            <form  action = '/register' method="post">
-              @csrf
-                <div class="modal-header">
-                    <h4 class="modal-title">Sign Up</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
+      <div class="modal-content">
+        <form action='/register' method="post">
+          @csrf
+          <div class="modal-header">
+            <h4 class="modal-title">Sign Up</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username" required="required" id="username" name="username">
-                    </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" required="required" id="username"
+                name="username">
+            </div>
 
-                    <!-- <div class="form-group">
+            <!-- <div class="form-group">
                         <input type="text" class="form-control" placeholder="Last name">
                     </div> -->
 
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="email"
-                            aria-describedby="emailHelp" placeholder="Email" required="required" name="email" >
-                        <!-- <small id="emailHelp" class="form-text text-muted">A password will be sent to your email
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email"
+                required="required" name="email">
+              <!-- <small id="emailHelp" class="form-text text-muted">A password will be sent to your email
                             address.</small> -->
-                    </div>
+            </div>
 
-                    <div class="form-group">
-                        <div class="clearfix">
-                            <!-- <label>Password</label> -->
-                            <!-- <a href="#" class="float-right text-muted"><small>Forgot?</small></a> -->
-                        </div>
-                        <input type="password" class="form-control" required="required" required="required" id="password1" name="password1" placeholder="Password">
-                    </div>
+            <div class="form-group">
+              <input type="number" class="form-control" id="number" aria-describedby="number" placeholder="Phone Number"
+                required="required" name="ph_number">
+              
+            </div>
 
-                    <div class="form-group">
-                        <input type="password" class="form-control" required="required"
-                            placeholder="Confirm Password" name="password2" name="password2">
-                    </div>
-                   
-                </div>
-                <div class="modal-footer justify-content-between">
-                    <input type="submit" class="btn btn-primary" value="SignUp">
-                    <div class="clearfix">
-                        <a class="float-right" data-toggle="modal" data-target="#myModal"
-                            data-dismiss="modal"><small>Already registered ? Login</small></a>
-                    </div>
-                </div>
+            <div class="form-group">
+              <div class="clearfix">
+                <!-- <label>Password</label> -->
+                <!-- <a href="#" class="float-right text-muted"><small>Forgot?</small></a> -->
+              </div>
+              <input type="password" class="form-control" required="required" required="required" id="password1"
+                name="password1" placeholder="Password">
+            </div>
 
-            </form>
-        </div>
+            <div class="form-group">
+              <input type="password" class="form-control" required="required" placeholder="Confirm Password"
+                name="password2" name="password2">
+            </div>
+
+          </div>
+          <div class="modal-footer justify-content-between">
+            <input type="submit" class="btn btn-primary" value="SignUp">
+            <div class="clearfix">
+              <a class="float-right" data-toggle="modal" data-target="#myModal" data-dismiss="modal"><small>Already
+                  registered ? Login</small></a>
+            </div>
+          </div>
+
+        </form>
+      </div>
     </div>
-</div>
-<!-- Forgot Password Modal -->
-<div id="myModal2" class="modal">
+  </div>
+
+
+  <!-- Forgot Password Modal -->
+  <div id="myModal2" class="modal">
     <div class="modal-dialog modal-login modal-dialog-centered">
-        <div class="modal-content">
-            <form action="/examples/actions/confirmation.php" method="post">
-                <div class="modal-header">
-                    <h4 class="modal-title"> Forgot Password </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
+      <div class="modal-content">
+        <form action="/resetpassword" method="POST">
+          @csrf
+          
+          <div class="modal-header">
+            <h4 class="modal-title"> Forgot Password </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name">
-                    </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" required="required" name="email" aria-describedby="emailHelp"
+                placeholder="Email">
+              
+            </div>
 
 
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Email">
-                        <small id="emailHelp" class="form-text text-muted"> A code will be sent to your email
-                            address.</small>
-                    </div>
+            <div class="form-group">
+              <input type="number" class="form-control" id="exampleInputEmail1" required="required" name="number" aria-describedby="emailHelp"
+                placeholder="Mobile Number">
+              
+            </div>
 
-                </div>
 
-                <div class="modal-footer justify-content-between">
-                    <input type="submit" class="btn btn-primary" value="Submit">
-                    <button type=button class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal"
-                        data-dismiss="modal"> Cancel</button>
-                </div>
 
-            </form>
-        </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="New Password" name="new_password">
+            </div>
+
+
+            
+
+          </div>
+
+          <div class="modal-footer justify-content-between">
+            <input type="submit" class="btn btn-primary" value="Submit">
+            <button type=button class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal"
+              data-dismiss="modal"> Cancel</button>
+          </div>
+
+        </form>
+      </div>
     </div>
-</div>
+  </div>
 
   <!-- Carousel -->
 
@@ -326,31 +364,7 @@
   </div>
 
 
-  <!-- About us Section -->
 
-  <!-- <section class="about-section spad">
-    <div class="container">
-      <div class="row">
-         <div class="col-lg-6">
-            <div class="" style="width: 20rem;">
-              <img src="gym3.jpg" alt="">
-            </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="about-text">
-            <h2>Story About Us</h2>
-            <p class="first-para">Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean pretium
-              sollicitudin, nascetur auci elit consequat ipsutissem niuis sed odio sit amet nibh vulputate
-              cursus a amet.</p>
-            <p class="second-para">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, gravida
-              quam semper libero sit amet. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
-              rhoncus, gravida quam semper libero sit amet.</p>
-            <a href="#" class="primary-btn">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <div class="jumbotron">
     <div class="container my-4 ">
       <div class="row featurette">
@@ -366,8 +380,8 @@
 
         </div>
         <div class="col-md-6 order-md-1">
-          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/560x360/auto" alt="500x500" src="images\index\gym3.jpg"
-            data-holder-rendered="true" style="width: 560px; height: 360px;">
+          <img class="featurette-image img-fluid mx-auto" data-src="holder.js/560x360/auto" alt="500x500"
+            src="images\index\gym3.jpg" data-holder-rendered="true" style = "width: 560px; height: 360px">
         </div>
       </div>
     </div>
@@ -424,17 +438,7 @@
 
 
           <div class="col-md-4">
-            <!-- <div class="card">
-              <img src="gym7.png" alt="John" style="width:100%; height: 250px;">
-              <h1>John Doe</h1>
-              <p class="title clr">Leader</p>
-              <div style="margin: 24px 0;">
-                <a href="#"><i class="fa fa-dribbble"></i></a> 
-                <a href="#"><i class="fa fa-twitter"></i></a>  
-                <a href="#"><i class="fa fa-linkedin"></i></a>  
-                <a href="#"><i class="fa fa-facebook"></i></a> 
-              </div>
-            </div> -->
+
             <div class="card testimonial-card mt-2 mb-3">
 
               <!-- Background color -->
@@ -458,16 +462,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <!-- <div class="card">
-              <img src="gym8.jfif" alt="John" style="width:100%; height: 250px;">
-              <h1>John Doe</h1>
-              <p class="title clr">Gym Coach</p>
-              <div style="margin: 24px 0;">
-                <a href="#"><i class="fa fa-dribbble"></i></a> 
-                <a href="#"><i class="fa fa-twitter"></i></a>  
-                <a href="#"><i class="fa fa-linkedin"></i></a>  
-                <a href="#"><i class="fa fa-facebook"></i></a> 
-              </div> -->
+
             <div class="card testimonial-card mt-2 mb-3">
 
               <!-- Background color -->
@@ -491,17 +486,6 @@
             </div>
           </div>
           <div class="col-md-4">
-            <!-- <div class="card">
-              <img src="gym9.jpg" alt="John" style="width:100%; height: 250px;">
-              <h1>John Doe</h1>
-              <p class="title clr">Gym Trainer</p>
-              <div style="margin: 24px 0;">
-                <a href="#"><i class="fa fa-dribbble"></i></a> 
-                <a href="#"><i class="fa fa-twitter"></i></a>  
-                <a href="#"><i class="fa fa-linkedin"></i></a>  
-                <a href="#"><i class="fa fa-facebook"></i></a> 
-              </div>
-            </div> -->
 
             <div class="card testimonial-card mt-2 mb-3">
 
@@ -531,6 +515,26 @@
       </div>
     </div>
   </div>
+
+
+  <section class="follow container-fluid">
+
+
+    <div class="wrapper">
+      <h2 class="mbr-fonts-style align-center mbr-light display-2">
+        Follow Us
+      </h2>
+      <div class="icon-list">
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i> </a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-google-plus"></i></a>
+
+      </div>
+    </div>
+
+  </section>
 
   <!-- Footer -->
 

@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
-    <title>Nutrition Products</title>
+    <title>Gym Clothing</title>
 
     <style>
         
@@ -127,43 +127,43 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark p-0 py-2 mb-1">
-        <!-- Just an image -->
-        <a class="navbar-brand mx-4" style="width: 100px;height: 60px;" href="index.html">
-            <!-- <img src="logo.jpg" width="100" height="60" class="d-inline-block align-top" alt="" loading="lazy"> -->
-            <h1 class="text-white font-weight-bold">Fitness Club</h1>
-        </a>
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark ">
+    <a class="navbar-brand" href="/"><img src="images\index\bestrong.png" width="150px" height="60px"
+        alt="Responsive image"></a>
 
-        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav py-1 ml-auto">
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                <li class="nav-item active">
-                    <a class="nav-link px-3 zoom" href="index.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link px-3 zoom" href="#">About<span class="sr-only">(current)</span></a>
-                </li>
+   
 
-                <li class="nav-item active">
-                    <a class="nav-link px-3 zoom" href="#">Blog<span class="sr-only">(current)</span></a>
-                </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav py-1 ml-auto">
 
-                <li class="nav-item active">
-                    <a class="nav-link px-3 zoom" href="#">Gallery<span class="sr-only">(current)</span></a>
-                </li>
+        <li class="nav-item active">
+          <a class="nav-link px-3 zoom" href="/"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link px-3 zoom" href="fitness_blog"><i class="fab fa-blogger"></i> Blog</a>
+        </li>
 
-                <li class="nav-item active">
-                    <a class="nav-link px-3 zoom" href="#">Contacts <span class="sr-only">(current)</span></a>
-                </li>
 
-            </ul>
-        </div>
-    </nav>
+        <li class="nav-item active">
+          <a class="nav-link px-3 zoom" href="product_nutrition"><i class="fas fa-store"></i> Products</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link trigger-btn px-3 zoom"  href="/logout"><i
+              class="fas fa-sign-out-alt"></i>Logout</a>
+        </li>
+
+        
+      </ul>
+    </div>
+  </nav>
 
     <!-- Carousel -->
 
@@ -215,18 +215,23 @@
     </div>
 
     <!-- Buttons -->
-    <div class="container my-4">
-        <div class="row">
-            <div class="mx-auto  col-sm-6">
-                <p>
-                    <a href="product_nutrition" class="btn btn-primary  my-2 mx-2 zooms">Nutritions</a>
-                    <a href="product_gym_equipments"  class="btn btn-danger my-2 mx-1 zooms">Gym Equipment</a>
-                    <a href="product_gym_accessories" class="btn btn-success my-2 mx-1 zooms">Gym Accessories</a>
-                    <a href="product_gym_clothing"  class="btn btn-warning my-2 mx-2 zooms">Gym Wear</a>
-                </p>
-            </div>
-        </div>
+    <div class="container-fluid">
+
+<div class="row justify-content-md-center my-5">
+    <div class="col col-lg-2">
+        <a href="product_nutrition" class="btn btn-primary  px-5 my-2 mx-2 zooms">Nutritions</a>
     </div>
+    <div class="col col-lg-2">
+        <a href="product_gym_equipments" class="btn btn-danger  my-2 mx-1 zooms">Gym Equipment</a>
+    </div>
+    <div class="col col-lg-2">
+        <a href="product_gym_accessories" class="btn btn-success px-4 my-2 mx-1 zooms">Gym Accessories</a>
+    </div>
+    <div class="col col-lg-2">
+        <a href="product_gym_clothing" class="btn btn-warning px-4 my-2 mx-2 zooms">Gym Wear</a>
+    </div>
+</div>
+</div>   
 
 
     
@@ -234,13 +239,13 @@
         <div class="row text-decoration-none">
             @foreach ($products as $product)
             <div class="col-md-3 col-6 my-3 mx-auto">
-                <a href="http://127.0.0.1:8000/product_nutrition/{{$product->id}}">
+                <a href="http://127.0.0.1:8000/product_description/{{$product->id}}">
                     <div class="card text-center zooms" style="width: 100%;">
                         <img src="{{$product->image}}" height="270px" class="card-img-top" alt="">
                         <div class="card-body text-decoration-none">
                             <h3 class="text-decoration-none">{{$product->name}} </h3>
-                            <p class="text-decoration-none">Price: Rs.2500.00 </p>
-                            <input type="submit" value="Add to cart" class="btn btn-primary btn-block">
+                            <p class="text-decoration-none">Price: Rs.{{$product->price}} </p>
+                            <input type="submit" value="Details" class="btn btn-primary btn-block">
                         </div>
                     </div>
                 </a>
