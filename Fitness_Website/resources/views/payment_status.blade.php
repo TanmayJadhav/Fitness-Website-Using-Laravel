@@ -8,7 +8,10 @@
 </head>
 <body>
     <h1>Thank You For Purchasing From FitWorld.Have a Good Day</h1>
-    
+    <!-- @foreach ($response  as $side=>$direc)
+    <h1>{{ $side}}=>{{$direc}}</h1>   
+    @endforeach -->
+    <h1>{{$response['ORDERID']}}</h1>
     
 </body>
 </html>

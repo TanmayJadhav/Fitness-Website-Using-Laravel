@@ -36,8 +36,8 @@ Route::get('product_gym_clothing',[ProductController::class,'get_product_gym_clo
 
 
 Route::post('/payment_status', [OrderController::class,'paymentCallback'])->name('status');
-Route::get('/payment/{id}', [OrderController::class,'order'])->middleware('auth');
-Route::view('/payment_status','payment_status');
+Route::get('/payment/{id}', [OrderController::class,'order']);
+// Route::view('/payment_status','payment_status');
 
 Route::get('product_description/{id}',[ProductController::class,'get_product_description']);
 
