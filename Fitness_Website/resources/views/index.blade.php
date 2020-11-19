@@ -432,7 +432,7 @@
   <!-- Jumbotron Expert Trainers -->
   <div class="jumbotron my-0">
     <div class="container">
-      <h1 class="text-center">Expert Trainers</h1>
+      <h1 class="text-center">Our Team</h1>
       <div class="container">
         <div class="row">
 
@@ -446,18 +446,17 @@
 
               <!-- Avatar -->
               <div class="avatar mx-auto white">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg"
+                <img src="images\index\avatar.png"
                   class="rounded-circle img-responsive" alt="woman avatar">
               </div>
 
               <!-- Content -->
               <div class="card-body">
                 <!-- Name -->
-                <h4 class="card-title font-weight-bold">Martha Smith</h4>
+                <h4 class="card-title font-weight-bold">Avdhut Shinde</h4>
                 <hr>
                 <!-- Quotation -->
-                <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                  adipisci</p>
+                <p><i class="fas fa-quote-left"></i> Front-End Developer</p>
               </div>
             </div>
           </div>
@@ -470,18 +469,17 @@
 
               <!-- Avatar -->
               <div class="avatar mx-auto white">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg"
+                <img src="images\index\avatar.png"
                   class="rounded-circle img-responsive" alt="woman avatar">
               </div>
 
               <!-- Content -->
               <div class="card-body">
                 <!-- Name -->
-                <h4 class="card-title font-weight-bold">Martha Smith</h4>
+                <h4 class="card-title font-weight-bold"> Tanmay Jadhav</h4>
                 <hr>
                 <!-- Quotation -->
-                <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                  adipisci</p>
+                <p><i class="fas fa-quote-left"></i> Back-End Developer</p>
               </div>
             </div>
           </div>
@@ -494,18 +492,17 @@
 
               <!-- Avatar -->
               <div class="avatar mx-auto white">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg"
+                <img src=" images\index\avatar.png"
                   class="rounded-circle img-responsive" alt="woman avatar">
               </div>
 
               <!-- Content -->
               <div class="card-body">
                 <!-- Name -->
-                <h4 class="card-title font-weight-bold">Martha Smith</h4>
+                <h4 class="card-title font-weight-bold"> Akshay Dhaygude</h4>
                 <hr>
                 <!-- Quotation -->
-                <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                  adipisci</p>
+                <p><i class="fas fa-quote-left"></i> Front-End Developer</p>
               </div>
             </div>
           </div>

@@ -177,28 +177,28 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Images\nutrition.jpg" height="585px" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Nutritions</h5>
-                    
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="Images/gymequipment.png" height="585px" class="d-block w-100" alt="...">
+                <img src="images\index\c1.jpg" height="585px" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Gym Equipment</h5>
                     
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="Images/gymaccessories.png" height="585px" class="d-block w-100" alt="...">
+                <img src="images\index\c2.jpg" height="585px" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Nutrition Products</h5>
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images\index\c3.jpg" height="585px" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Gym Accessories</h5>
                     
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="Images/Gymwear.jpg" height="585px" class="d-block w-100" alt="...">
+                <img src="images\index\c4.jpg" height="585px" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Gym Wear</h5>
                     
