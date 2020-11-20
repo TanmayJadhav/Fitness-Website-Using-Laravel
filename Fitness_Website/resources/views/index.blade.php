@@ -334,23 +334,20 @@
       <div class="carousel-item active">
         <img src="images\index\gym2.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h5>Gym Motivation</h5>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="images\index\gym2.jpg" class="d-block w-100" alt="...">
+        <img src="images\index\bg.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>Never Quit</h5>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="images\index\gym2.jpg" class="d-block w-100" alt="...">
+        <img src="images\index\bg2.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
+          <h5>Keep Going</h5>
+          </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -376,8 +373,7 @@
             officia tempora reprehenderit obcaecati architecto voluptatum delectus, consequuntur facere quibusdam. Lorem
             ipsum, dolor sit amet consectetur adipisicing elit. Aut hic non excepturi debitis modi dolor optio sequi,
             facilis cum magni!</p>
-          <button type="button" class="btn btn-success btn-lg">Read More »</button>
-
+          
         </div>
         <div class="col-md-6 order-md-1">
           <img class="featurette-image img-fluid mx-auto" data-src="holder.js/560x360/auto" alt="500x500"

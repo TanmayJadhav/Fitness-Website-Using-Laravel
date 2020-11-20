@@ -18,6 +18,9 @@ class OrderController extends Controller
      *
      * @return Response
      */
+
+    
+
     public function order($id)
     {   
         $user_id = Auth()->user()->id;
@@ -25,6 +28,7 @@ class OrderController extends Controller
         $user_ph_number = Auth()->user()->ph_number;
         $product = Product::find($id); 
         // $this->paymentCallback($id);
+
 
         $payment = PaytmWallet::with('receive');
         $payment->prepare([
@@ -35,6 +39,7 @@ class OrderController extends Controller
           'amount' => $product->price,//$order->amount,
           'callback_url' => 'http://127.0.0.1:8000/payment_status'
         ]);
+
         return $payment->receive();
     }
 
