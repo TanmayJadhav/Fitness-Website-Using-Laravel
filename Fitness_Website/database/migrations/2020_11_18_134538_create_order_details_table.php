@@ -22,10 +22,13 @@ class CreateOrderDetailsTable extends Migration
             $table->string('product_price');
             $table->string('product_image');
             $table->integer('order_id');
-            $table->integer('txnid');
+            $table->string('txnid');
             $table->datetime('order_date');
             $table->string('bank_name');
             $table->timestamps();
+
+
+            
         });
     }
 

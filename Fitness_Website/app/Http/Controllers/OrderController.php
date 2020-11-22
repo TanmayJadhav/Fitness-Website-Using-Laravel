@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 use App\Models\OrderDetail;
 
@@ -29,7 +30,7 @@ class OrderController extends Controller
         $product = Product::find($id); 
         // $this->paymentCallback($id);
         
-        $request->session()->push('product_id', '$id');
+        session(['product_id' => $id]);
 
         $payment = PaytmWallet::with('receive');
         $payment->prepare([
@@ -62,16 +63,32 @@ class OrderController extends Controller
           //Transaction Successful
           // return 'Transaction Successful';
 
-          $id = $request->session()->pull('product_id', '$id');
-          $user = auth()->user();
+          $id = $value = session('product_id');
+          $user_id = auth()->user()->id;
           $user_name = auth()->user()->name;
           // $user_email = Auth()->user()->email;
-          // $user_ph_number = Auth()->user()->ph_number;
+          $user_ph_number = Auth()->user()->ph_number;
           $product = Product::find($id); 
 
-          $order_details=OrderDetail::create(['user_id'=>$user->id,'user_name'=>$user_name,'ph_number'=>$user->ph_number,'product_name'=>$product->name,'product_price'=>$product->price,'product_image'=>$product->image,'order_id'=>$response['ORDERID'],'txnid'=>$response['TXNID'],'order_date'=>$response['TXNDATE'],'bank_name'=>$response['BANKNAME']]);
+          $fillable = ['user_id'];
+
+          // dd($product);
+          // DB::table('order_deatils')->insert([
+          //   ['user_id'=>auth()->user()],
+          //   ['user_name'=>auth()->user()->name],
+          //   ['ph_number'=>auth()->user()->ph_number],
+          //   ['product_name'=>$product->name],
+          //   ['product_price'=>$product->price],
+          //   ['product_image'=>$product->image],
+          //   ['order_id'=>$response['ORDERID']],
+          //   ['txnid'=>$response['TXNID']],
+          //   ['order_date'=>$response['TXNDATE']],
+          //   ['bank_name'=>$response['BANKNAME']]
+          // ]);
+
+          $order_details=OrderDetail::create(['user_id'=>$user_id,'user_name'=>$user_name,'ph_number'=>$user_ph_number,'product_name'=>$product->name,'product_price'=>$product->price,'product_image'=>$product->image,'order_id'=>$response['ORDERID'],'txnid'=>$response['TXNID'],'order_date'=>$response['TXNDATE'],'bank_name'=>$response['BANKNAME']]);
           // dd($order_details);
-          $order_details->save();
+          // $order_details->save();
           return view('payment_status',compact('response'));
       }
       else if($transaction->isFailed()){

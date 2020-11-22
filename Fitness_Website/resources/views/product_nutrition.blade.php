@@ -156,11 +156,12 @@
           <a class="nav-link px-3 zoom" href="product_nutrition"><i class="fas fa-store"></i> Products</a>
         </li>
 
-
+        @if (auth()->user())
         <li class="nav-item">
           <a class="nav-link trigger-btn px-3 zoom"  href="/logout"><i
               class="fas fa-sign-out-alt"></i>Logout</a>
         </li>
+        @endif
 
         
       </ul>
