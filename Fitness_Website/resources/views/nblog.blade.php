@@ -114,19 +114,6 @@
         @endforeach
 
 
-        <!-- Pagination
-        <ul class="pagination justify-content-center mb-4">
-         
-          <li class="page-item ">
-            <a class="page-link" href="fblog.html">1 </a>
-          </li>
-          <li class="page-item ">
-            <a class="page-link" href="nblog.html">2 </a>
-          </li>
-          <li class="page-item ">
-            <a class="page-link" href="wlblog.html">next &rarr;</a>
-          </li>
-        </ul> -->
 
       </div>
 
@@ -174,7 +161,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">BeStrong Fitness club © 2020 by All Rights Reserved.</p>
+      <p class="m-0 text-center text-white">BeStrong © 2020 by All Rights Reserved.</p>
     </div>
     <!-- /.container -->
   </footer>

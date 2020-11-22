@@ -174,7 +174,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">BeStrong Fitness club © 2020 by All Rights Reserved.</p>
+      <p class="m-0 text-center text-white">BeStrong © 2020 by All Rights Reserved.</p>
     </div>
     <!-- /.container -->
   </footer>

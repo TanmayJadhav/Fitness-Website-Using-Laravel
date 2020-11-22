@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  
+
 
 
 
@@ -112,9 +112,9 @@
 
 <body>
   @if (session('alert'))
-      <div class="alert alert-success">
-          {{ session('alert') }}
-      </div>
+  <div class="alert alert-success">
+    {{ session('alert') }}
+  </div>
   @endif
 
   <nav class="navbar sticky-top navbar-expand-lg bg-dark navbar-dark ">
@@ -127,7 +127,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-   
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav py-1 ml-auto">
@@ -141,9 +141,9 @@
 
 
         <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="#"><i class="fas fa-address-card"></i> About</a>
+          <a class="nav-link px-3 zoom" href="#aboutus"><i class="fas fa-address-card"></i> About</a>
         </li>
-
+        @if (!auth()->user())
         <li class="nav-item">
           <a class="nav-link trigger-btn px-3 zoom" data-toggle="modal" href="#myModal"><i
               class="fas fa-sign-in-alt"></i> Login</a>
@@ -152,11 +152,11 @@
           <a class="nav-link trigger-btn px-3 zoom" data-toggle="modal" href="#myModal1"><i
               class="fas fa-sign-in-alt"></i> SignUp</a>
         </li>
+        @endif
         
         @if (auth()->user())
         <li class="nav-item">
-          <a class="nav-link trigger-btn px-3 zoom"  href="/logout"><i
-              class="fas fa-sign-out-alt"></i>Logout</a>
+          <a class="nav-link trigger-btn px-3 zoom" href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </li>
         @endif
 
@@ -192,7 +192,7 @@
               </div>
             </div>
           </div>
-          
+
 
           <!-- <span class="my-4" style="margin: 0 210px;">
                     <button type="submit" class="btn btn-primary mx-auto">Log in</button>
@@ -242,7 +242,7 @@
             <div class="form-group">
               <input type="number" class="form-control" id="number" aria-describedby="number" placeholder="Phone Number"
                 required="required" name="ph_number">
-              
+
             </div>
 
             <div class="form-group">
@@ -280,7 +280,7 @@
       <div class="modal-content">
         <form action="/resetpassword" method="POST">
           @csrf
-          
+
           <div class="modal-header">
             <h4 class="modal-title"> Forgot Password </h4>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -288,16 +288,16 @@
           <div class="modal-body">
 
             <div class="form-group">
-              <input type="email" class="form-control" id="exampleInputEmail1" required="required" name="email" aria-describedby="emailHelp"
-                placeholder="Email">
-              
+              <input type="email" class="form-control" id="exampleInputEmail1" required="required" name="email"
+                aria-describedby="emailHelp" placeholder="Email">
+
             </div>
 
 
             <div class="form-group">
-              <input type="number" class="form-control" id="exampleInputEmail1" required="required" name="number" aria-describedby="emailHelp"
-                placeholder="Mobile Number">
-              
+              <input type="number" class="form-control" id="exampleInputEmail1" required="required" name="number"
+                aria-describedby="emailHelp" placeholder="Mobile Number">
+
             </div>
 
 
@@ -307,7 +307,7 @@
             </div>
 
 
-            
+
 
           </div>
 
@@ -347,7 +347,7 @@
         <img src="images\index\bg2.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Keep Going</h5>
-          </div>
+        </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -363,21 +363,17 @@
 
 
   <div class="jumbotron">
-    <div class="container my-4 ">
+    <div class="container my-4" id="aboutus">
       <div class="row featurette">
         <div class="col-md-6 order-md-2 px-4">
-          <h1 class="featurette-heading text-center"><strong> Story About Us</strong></h1>
-          <p class="lead mt-4 text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis est, corrupti
-            harum laudantium obcaecati, perspiciatis nemo cupiditate distinctio. Eos iure qui ex corporis rerum
-            reiciendis
-            officia tempora reprehenderit obcaecati architecto voluptatum delectus, consequuntur facere quibusdam. Lorem
-            ipsum, dolor sit amet consectetur adipisicing elit. Aut hic non excepturi debitis modi dolor optio sequi,
-            facilis cum magni!</p>
-          
+          <h1 class="featurette-heading text-center"><strong>About Us</strong></h1>
+          <p class="lead mt-4 text-dark">We want to help you live a fit and healthy lifestyle! We do this by helping you find the most suitable equipment for your home gym,
+          studio or commercial gym, keeping your budget, lifestyle and fitness goals in mind. We stock a wide range of gym equipment, with strength equipment, cardio,
+          cross training and so much more. Our awesome team is always keen to help, so please call us to discuss your needs.</p>
         </div>
         <div class="col-md-6 order-md-1">
           <img class="featurette-image img-fluid mx-auto" data-src="holder.js/560x360/auto" alt="500x500"
-            src="images\index\gym3.jpg" data-holder-rendered="true" style = "width: 560px; height: 360px">
+            src="images\index\gym3.jpg" data-holder-rendered="true" style="width: 560px; height: 360px">
         </div>
       </div>
     </div>
@@ -387,39 +383,36 @@
   <!-- Services -->
 
   <div class="container">
-    <div class="row text-decoration-none">
+    <div class="row mb-2">
 
-      <div class="col-md-4 my-3">
-        <a href="#">
-          <div class="card text-center zoom" style="width: 100%;">
-            <img src="images\index\blog.jpg" class="card-img-top" style="height: 300px;" alt="Blog">
-            <div class="card-body text-decoration-none">
-              <h5 class="card-title text-success text-decoration-none">Blog</h5>
-            </div>
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col-auto d-lg-block">
+            <img src="images\index\blog.jpg" alt="" width="290" height="250">
           </div>
-        </a>
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">Fitness Blogs</h3><br>
+            <p class="card-text mb-auto">Presenting BeStrong Blogs where you can read about how to remain healthy and fit.</p>
+            <a href="nutrition_blog" class="stretched-link">Visit Blogs</a>
+          </div>
+        </div>
       </div>
 
-      <div class="col-md-4 my-3">
-        <a href="#">
-          <div class="card text-center zoom" style="width: 100%;">
-            <img src="images\index\service1.png" class="card-img-top" style="height: 300px;" alt="Service">
-            <div class="card-body">
-              <h5 class="card-title text-danger">Service</h5>
-            </div>
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col-auto d-lg-block">
+            <img src="images\index\products.jpg" alt="" width="270" height="250">
           </div>
-      </div>
-      </a>
-      <div class="col-md-4 my-3">
-        <a href="product_gym_equipments">
-          <div class="card text-center zoom" style="width: 100%;">
-            <img src="images\index\products.jpg" class="card-img-top" style="height: 300px;" alt="Products">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Products</h5>
-            </div>
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">Fitness Products</h3><br>
+            <p class="mb-auto">Presenting BeStrong Fitness Store where you can shop various health and fitness products.</p>
+            <a href="product_nutrition" class="stretched-link">Visit Store</a>
           </div>
-        </a>
+        </div>
       </div>
+
     </div>
   </div>
 
@@ -442,8 +435,7 @@
 
               <!-- Avatar -->
               <div class="avatar mx-auto white">
-                <img src="images\index\avatar.png"
-                  class="rounded-circle img-responsive" alt="woman avatar">
+                <img src="images\index\avatar.png" class="rounded-circle img-responsive" alt="woman avatar">
               </div>
 
               <!-- Content -->
@@ -465,8 +457,7 @@
 
               <!-- Avatar -->
               <div class="avatar mx-auto white">
-                <img src="images\index\avatar.png"
-                  class="rounded-circle img-responsive" alt="woman avatar">
+                <img src="images\index\avatar.png" class="rounded-circle img-responsive" alt="woman avatar">
               </div>
 
               <!-- Content -->
@@ -488,8 +479,7 @@
 
               <!-- Avatar -->
               <div class="avatar mx-auto white">
-                <img src=" images\index\avatar.png"
-                  class="rounded-circle img-responsive" alt="woman avatar">
+                <img src=" images\index\avatar.png" class="rounded-circle img-responsive" alt="woman avatar">
               </div>
 
               <!-- Content -->
@@ -534,7 +524,7 @@
   <div class="container-fluid bg-dark text-white">
     <!-- <hr style="color: white;"> -->
     <div class="text-center text-light px-4 py-2">
-      <p>Gym © 2020 by All Rights Reserved.</p>
+      <p>BeStrong © 2020 by All Rights Reserved.</p>
     </div>
   </div>
 

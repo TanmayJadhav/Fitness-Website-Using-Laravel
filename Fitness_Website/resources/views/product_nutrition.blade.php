@@ -257,7 +257,7 @@
 
 
     <div class="footer bg-dark footer-dark text-white">
-        <h5>Copyright @<span class="glyphicon glyphicon-copyright-mark"></span>2020. All Rights Reserved
+        <h5>BeStrong @<span class="glyphicon glyphicon-copyright-mark"></span>2020. All Rights Reserved
             </span></h5>
     </div>
 

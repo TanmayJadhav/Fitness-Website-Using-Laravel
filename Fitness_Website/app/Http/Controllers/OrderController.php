@@ -8,7 +8,7 @@ use App\Models\Product;
 use App\Models\OrderDetail;
 
 use Auth;
-
+use Sseesion;
 use PaytmWallet;
 
 class OrderController extends Controller
@@ -21,14 +21,15 @@ class OrderController extends Controller
 
     
 
-    public function order($id)
+    public function order(Request $request,$id)
     {   
         $user_id = Auth()->user()->id;
         $user_email = Auth()->user()->email;
         $user_ph_number = Auth()->user()->ph_number;
         $product = Product::find($id); 
         // $this->paymentCallback($id);
-
+        
+        $request->session()->push('product_id', '$id');
 
         $payment = PaytmWallet::with('receive');
         $payment->prepare([
@@ -61,13 +62,16 @@ class OrderController extends Controller
           //Transaction Successful
           // return 'Transaction Successful';
 
-          // $user_id = Auth()->user()->id;
+          $id = $request->session()->pull('product_id', '$id');
+          $user = auth()->user();
+          $user_name = auth()->user()->name;
           // $user_email = Auth()->user()->email;
           // $user_ph_number = Auth()->user()->ph_number;
-          // $product = Product::find($id); 
+          $product = Product::find($id); 
 
-          // $order_details=OrderDetail::create(['user_id'=>$user_id,'user_name'=>$user_id->name,'ph_number'=>$user_id->ph_number,'product_name'=>$product->name,'product_price'=>$product->price,'product_image'=>$product->image,'order_id'=>$response['ORDERID'],'txnid'=>$response['TXNID'],'order_date'=>$response['TXNDATE'],'bank_name'=>$response['BANKNAME']]);
+          $order_details=OrderDetail::create(['user_id'=>$user->id,'user_name'=>$user_name,'ph_number'=>$user->ph_number,'product_name'=>$product->name,'product_price'=>$product->price,'product_image'=>$product->image,'order_id'=>$response['ORDERID'],'txnid'=>$response['TXNID'],'order_date'=>$response['TXNDATE'],'bank_name'=>$response['BANKNAME']]);
           // dd($order_details);
+          $order_details->save();
           return view('payment_status',compact('response'));
       }
       else if($transaction->isFailed()){
