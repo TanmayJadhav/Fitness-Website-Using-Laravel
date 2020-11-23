@@ -20,7 +20,7 @@ class UserAuthenticateController extends Controller
         
         if(Auth::attempt(['email'=>$email,'password'=>$password]))
         {
-            return redirect('/product_nutrition');
+            return redirect('/');
         }
         else{
             return redirect()->back()->with('alert','Login Details Not Found. Please Signup First');

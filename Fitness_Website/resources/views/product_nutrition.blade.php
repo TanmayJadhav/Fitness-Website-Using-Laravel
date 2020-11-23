@@ -153,7 +153,7 @@
 
 
         <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="product_nutrition"><i class="fas fa-store"></i> Products</a>
+          <a class="nav-link px-3 zoom" href="product_nutrition"><i class="fas fa-shopping-bag"></i> Products</a>
         </li>
 
         @if (auth()->user())

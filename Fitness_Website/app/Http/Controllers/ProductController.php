@@ -45,7 +45,7 @@ class ProductController extends Controller
     public function order_details(){
         $user_id = auth()->user()->id;
 
-        $order = OrderDetail::find($user_id)->get();
+        $order = OrderDetail::where('user_id',$user_id)->get();
         // dd($order);
         // echo($user_id);
         // echo(compact('order'));

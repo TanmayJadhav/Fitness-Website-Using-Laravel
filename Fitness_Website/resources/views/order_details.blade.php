@@ -17,7 +17,7 @@
             background-size: cover;
             font-family: 'Lato', sans-serif;
             color: rgba(116, 116, 116, 0.667);
-            background: linear-gradient(140deg, #fff, 50%, #BA68C8)
+            background: linear-gradient(140deg, #fff, 50%, #ff7300da)
         }
 
         .container-fluid {
@@ -34,7 +34,8 @@
         }
 
         .card-1 {
-            box-shadow: 2px 2px 10px 0px rgb(190, 108, 170)
+            box-shadow: 2px 2px 10px 0px rgb(17, 16, 17);
+            width: 700px !important
         }
 
         hr {
@@ -46,7 +47,7 @@
         }
 
         .change-color {
-            color: #AB47BC !important
+            color: #ff7300da !important
         }
 
         .card-2 {
@@ -141,10 +142,10 @@
             <div class="card-header bg-dark">
                 <div class="media flex-sm-row flex-column-reverse justify-content-between ">
                     <div class="col my-auto">
-                        <h4 class="mb-0 text-light">Thanks for your Order,<span class="change-color">{{auth()->user()->name}}</span> !</h4>
+                        <h4 class="mb-0 text-light">Thanks for your Order, <span class="change-color">{{auth()->user()->name}}</span> !</h4>
                     </div>
-                    <div class="col-auto text-center my-auto pl-0 pt-sm-4 "> <img
-                            class="img-fluid my-auto align-items-center mb-2 pt-3" src="images\index\bestrong.png"
+                    <div class="col-auto text-center my-0 pl-0 pt-sm-2 "> <img
+                            class="img-fluid align-items-center mb-2 " src="images\index\bestrong.png"
                             width="115" height="115">
                     </div>
                 </div>
@@ -186,7 +187,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-4">
+                <!-- <div class="row mt-4">
                     <div class="col">
                         <div class="row justify-content-between">
                             <div class="col-auto">
@@ -230,6 +231,23 @@
                         <p class="mb-1"> Order ID : {{$order->order_id}}</p>
                         <p class="mb-1">Transaction ID : {{$order->txnid}}</p>
                         <p class="mb-1">Order Date: {{$order->order_date}}</p>
+                    </div>
+                </div> -->
+            
+                <div class="container my-5">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p class="mb-1 text-dark"><b>Additional Details</b></p>
+                            <p class="mb-1"><b> Order ID</b> : {{$order->order_id}}</p>
+                            <p class="mb-1"><b> Transaction ID</b> : {{$order->txnid}}</p>
+                            <p class="mb-1"><b>Order Date</b> {{$order->order_date}}</p>
+                        </div>
+                        <div class="col-md-5 mt-4">
+                            <p class="mb-1"><b>Mobile Number</b> : {{$order->ph_number}}</p>
+                            <p class="mb-1"> <b>Bank Name </b>: {{$order->bank_name}}</p>
+                            <p class="mb-1"><b>Total</b> : &#8377;{{$order->product_price}} </p>
+                            <p class="mb-1"><b>Delivery Charges</b> : Free</p>
+                        </div>
                     </div>
                 </div>
             </div>

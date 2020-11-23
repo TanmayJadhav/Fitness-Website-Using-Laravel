@@ -139,14 +139,19 @@
           <a class="nav-link px-3 zoom" href="fitness_blog"><i class="fab fa-blogger"></i> Blog</a>
         </li>
 
-
         <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="#aboutus"><i class="fas fa-address-card"></i> About</a>
+          <a class="nav-link px-3 zoom" href="/product_nutrition"><i class="fas fa-shopping-bag"></i> Products</a>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="order_details"><i class="fas fa-address-card"></i>My Orders</a>
+          <a class="nav-link px-3 zoom" href="#aboutus"><i class="fas fa-address-card"></i> About Us</a>
         </li>
+
+        @if (auth()->user())
+        <li class="nav-item active">
+          <a class="nav-link px-3 zoom" href="order_details"><i class="fas fa-shopping-cart "></i> My Orders</a>
+        </li>
+        @endif
 
         @if (!auth()->user())
         <li class="nav-item">

@@ -77,7 +77,7 @@
 
 
         <li class="nav-item active">
-          <a class="nav-link px-3 zoom" href="product_nutrition"><i class="fas fa-store"></i> Products</a>
+          <a class="nav-link px-3 zoom" href="product_nutrition"><i class="fas fa-shopping-bag"></i> Products</a>
         </li>
         
       </ul>
@@ -174,7 +174,8 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">BeStrong © 2020 by All Rights Reserved.</p>
+      <p class="m-0 text-center text-white">BeStrong
+         © 2020 by All Rights Reserved.</p>
     </div>
     <!-- /.container -->
   </footer>
