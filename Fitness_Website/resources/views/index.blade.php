@@ -143,6 +143,11 @@
         <li class="nav-item active">
           <a class="nav-link px-3 zoom" href="#aboutus"><i class="fas fa-address-card"></i> About</a>
         </li>
+
+        <li class="nav-item active">
+          <a class="nav-link px-3 zoom" href="order_details"><i class="fas fa-address-card"></i>My Orders</a>
+        </li>
+
         @if (!auth()->user())
         <li class="nav-item">
           <a class="nav-link trigger-btn px-3 zoom" data-toggle="modal" href="#myModal"><i
@@ -153,7 +158,7 @@
               class="fas fa-sign-in-alt"></i> SignUp</a>
         </li>
         @endif
-        
+
         @if (auth()->user())
         <li class="nav-item">
           <a class="nav-link trigger-btn px-3 zoom" href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>

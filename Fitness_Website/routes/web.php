@@ -47,3 +47,5 @@ Route::get('weight_loss_blog',[BlogController::class,'get_weight_loss_blog']);
 Route::get('fitness_blog',[BlogController::class,'get_fitness_blog']);
 
 Route::get('blog_description/{id}',[BlogController::class,'get_blog_description']);
+
+Route::get('order_details',[ProductController::class,'order_details']);

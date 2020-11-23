@@ -72,20 +72,6 @@ class OrderController extends Controller
 
           $fillable = ['user_id'];
 
-          // dd($product);
-          // DB::table('order_deatils')->insert([
-          //   ['user_id'=>auth()->user()],
-          //   ['user_name'=>auth()->user()->name],
-          //   ['ph_number'=>auth()->user()->ph_number],
-          //   ['product_name'=>$product->name],
-          //   ['product_price'=>$product->price],
-          //   ['product_image'=>$product->image],
-          //   ['order_id'=>$response['ORDERID']],
-          //   ['txnid'=>$response['TXNID']],
-          //   ['order_date'=>$response['TXNDATE']],
-          //   ['bank_name'=>$response['BANKNAME']]
-          // ]);
-
           $order_details=OrderDetail::create(['user_id'=>$user_id,'user_name'=>$user_name,'ph_number'=>$user_ph_number,'product_name'=>$product->name,'product_price'=>$product->price,'product_image'=>$product->image,'order_id'=>$response['ORDERID'],'txnid'=>$response['TXNID'],'order_date'=>$response['TXNDATE'],'bank_name'=>$response['BANKNAME']]);
           // dd($order_details);
           // $order_details->save();
@@ -106,6 +92,7 @@ class OrderController extends Controller
       // return redirect()->route('payment_status',[$response]);
     }   
 
+    
     
     
     
