@@ -137,6 +137,10 @@
 
 <body>
 
+    <div class="m-3">
+        <a href="/" class="btn btn-success px-4 py-2" role="button" aria-pressed="true">Back</a>
+
+    </div>
     <div class="container-fluid my-5 d-flex justify-content-center">
         <div class="card card-1">
             <div class="card-header bg-dark">
