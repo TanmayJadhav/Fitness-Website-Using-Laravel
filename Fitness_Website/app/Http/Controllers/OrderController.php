@@ -39,7 +39,7 @@ class OrderController extends Controller
           'mobile_number' => $user_ph_number,
           'email' => $user_email,
           'amount' => $product->price,//$order->amount,
-          'callback_url' => 'http://127.0.0.1:8000/payment_status'
+          'callback_url' => 'https://bestrongfitness.herokuapp.com/payment_status'
         ]);
 
         return $payment->receive();
