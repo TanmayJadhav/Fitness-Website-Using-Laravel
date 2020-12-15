@@ -42,7 +42,7 @@
 
   
     <div class="m-3">
-        <a href="http://127.0.0.1:8000/product_nutrition" class="btn btn-outline-success px-4 py-2" role="button" aria-pressed="true">Back</a>
+        <a href="/product_nutrition" class="btn btn-outline-success px-4 py-2" role="button" aria-pressed="true">Back</a>
 
     </div>
     <div class="container my-4 py-4">
