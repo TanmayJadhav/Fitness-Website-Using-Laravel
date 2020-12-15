@@ -60,7 +60,7 @@
                 <h5 class="lead mt-4">Price: Rs.{{$product_description->price}} </h5><br>
       
                 @if ($user_logged)
-                <a href="http://127.0.0.1:8000/payment/{{$product_description->id}}" class="btn btn-warning my-5 px-4 py-2" role="button" aria-pressed="true">BUY NOW</a>
+                <a href="/payment/{{$product_description->id}}" class="btn btn-warning my-5 px-4 py-2" role="button" aria-pressed="true">BUY NOW</a>
                 @else
                 <div class="alert alert-warning">
                 Please Login To Buy This Product

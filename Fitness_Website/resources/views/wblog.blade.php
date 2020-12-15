@@ -104,7 +104,7 @@
           <div class="card-body">
             <h2 class="card-title">{{$blog->name}} </h2>
             <p class="card-text">{{$blog->brief}}</p>
-            <a href="http://127.0.0.1:8000/blog_description/{{$blog->id}}" class="btn btn-primary">Read More &rarr;</a>
+            <a href="/blog_description/{{$blog->id}}" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on {{$blog->date}} by

@@ -346,7 +346,7 @@
     </nav>
 
     <div class="m-3">
-        <a href="http://127.0.0.1:8000/fitness_blog" class="btn btn-outline-success px-4 py-2" role="button" aria-pressed="true">Back</a>
+        <a href="/fitness_blog" class="btn btn-outline-success px-4 py-2" role="button" aria-pressed="true">Back</a>
 
     </div>
 

@@ -242,7 +242,7 @@
         <div class="row text-decoration-none">
             @foreach ($products as $product)
             <div class="col-md-3 col-6 my-3 mx-auto">
-                <a href="http://127.0.0.1:8000/product_description/{{$product->id}}">
+                <a href="/product_description/{{$product->id}}">
                     <div class="card text-center zooms" style="width: 100%;">
                         <img src="{{$product->image}}" height="270px" class="card-img-top" alt="">
                         <div class="card-body text-decoration-none">
