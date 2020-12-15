@@ -434,29 +434,63 @@ class DatabaseSeeder extends Seeder
 
 
         // Blog::create(['name'=>'Weight Loss Training Program Should Suit Your Body For Faster Results','image'=>'images\blog\wlb3.jpg','date'=>'May 1,2020','brief'=>'A Good Weight Loss Training Program Is the Trick to Stay Fit! Every time you look in the mirror, you promise yourself that you will start exercising to kick out that extra flab from your body and come in shape again.','content'=>'A Good Weight Loss Training Program Is the Trick to Stay Fit!
-        // Every time you look in the mirror, you promise yourself that you will start exercising to kick out that extra flab from your body and come in shape again. But that is just it. The next minute, you forget about your weight loss training program and just go about your normal routine.
+        // // Every time you look in the mirror, you promise yourself that you will start exercising to kick out that extra flab from your body and come in shape again. But that is just it. The next minute, you forget about your weight loss training program and just go about your normal routine.
         
-        // Boot Camps Might be High on Promises but Are Low on Results
-        // The most common mistake that you have to avoid is joining boot camp weight loss sessions that promise immediate results. These programs give strenuous weight training exercises that may cause injury to your body. They make tall claims but all fall flat when it comes to delivering the results. Contrary to the weight loss training program, you will end up gaining weight once you get back to your normal life after completing the boot camp training.
+        // // Boot Camps Might be High on Promises but Are Low on Results
+        // // The most common mistake that you have to avoid is joining boot camp weight loss sessions that promise immediate results. These programs give strenuous weight training exercises that may cause injury to your body. They make tall claims but all fall flat when it comes to delivering the results. Contrary to the weight loss training program, you will end up gaining weight once you get back to your normal life after completing the boot camp training.
         
-        // Choose the Gym Where Personal Training Is provided
-        // Your initial step would be to enroll in a good gym where personal training for weight loss is provided. The weight training at the gym will ensure that your exercises are regular and adequate for the body. The personal training provided at the gym will ensure that your weight training is according to your body requirement and nothing in excess. Also, good gyms ensure that they alter your diet regimen and exercise schedule every now and then to keep the metabolic process active at all times.   
+        // // Choose the Gym Where Personal Training Is provided
+        // // Your initial step would be to enroll in a good gym where personal training for weight loss is provided. The weight training at the gym will ensure that your exercises are regular and adequate for the body. The personal training provided at the gym will ensure that your weight training is according to your body requirement and nothing in excess. Also, good gyms ensure that they alter your diet regimen and exercise schedule every now and then to keep the metabolic process active at all times.   
         
-        // Stay Motivated for Your Weight Loss Training Program
-        // The most necessary step to continue your weight loss training program is discipline and motivation. Remember that there is no wonder pill to lose weight. It has to be a gradual and step-by-step effort. Many-a-times, you find that your current weight loss training program is challenging and arduous. Then, seek the help of an expert hand to move on and achieve your motivation. Personal training will ensure variations in your weight training schedule that will bring innovation and the much-required change to keep you motivated to do better.
+        // // Stay Motivated for Your Weight Loss Training Program
+        // // The most necessary step to continue your weight loss training program is discipline and motivation. Remember that there is no wonder pill to lose weight. It has to be a gradual and step-by-step effort. Many-a-times, you find that your current weight loss training program is challenging and arduous. Then, seek the help of an expert hand to move on and achieve your motivation. Personal training will ensure variations in your weight training schedule that will bring innovation and the much-required change to keep you motivated to do better.
         
-        // Appropriate Weight Training to Aid Faster Weight Loss Results
-        // There are many diet plans out there that are efficient. But, a good weight loss training program should teach you the fundamentals of exercise and an appropriate diet for you. The finest weight loss training program should be designed to cater for precisely what your body needs and can take. The correct blend of aerobics, cardio, and weight training improves your endurance level and keeps you healthy and fit. It helps you burn out that fat at a faster rate and tones your muscles.
+        // // Appropriate Weight Training to Aid Faster Weight Loss Results
+        // // There are many diet plans out there that are efficient. But, a good weight loss training program should teach you the fundamentals of exercise and an appropriate diet for you. The finest weight loss training program should be designed to cater for precisely what your body needs and can take. The correct blend of aerobics, cardio, and weight training improves your endurance level and keeps you healthy and fit. It helps you burn out that fat at a faster rate and tones your muscles.
         
-        // Physical Personal Training for Losing Weight
-        // There are many good gyms out there. But make sure that your gym has qualified and experienced instructors. The personal training goes a long way in delivering appropriate results of your weight loss training program. The personal instructor will know which form of training is good for you or why it is not good for you. They will determine what you should eat and what weight training you should do based on your body structure and composition.
+        // // Physical Personal Training for Losing Weight
+        // // There are many good gyms out there. But make sure that your gym has qualified and experienced instructors. The personal training goes a long way in delivering appropriate results of your weight loss training program. The personal instructor will know which form of training is good for you or why it is not good for you. They will determine what you should eat and what weight training you should do based on your body structure and composition.
         
-        // Go for Healthy Weight Loss and Not Just Weight Loss!
-        // A good weight loss training program should educate you on the essentials of proper diet and exercise. There are plenty of programs that promise results but fail to deliver. Proper personal training is a necessity and not a luxury. Try weight training that strengthens your muscles and not injures them. Take proper steps and do everything consistently. Stick to the weight loss training program that works for you and you are bound to see amazing results in the long run.
+        // // Go for Healthy Weight Loss and Not Just Weight Loss!
+        // // A good weight loss training program should educate you on the essentials of proper diet and exercise. There are plenty of programs that promise results but fail to deliver. Proper personal training is a necessity and not a luxury. Try weight training that strengthens your muscles and not injures them. Take proper steps and do everything consistently. Stick to the weight loss training program that works for you and you are bound to see amazing results in the long run.
         
-        // ','type'=>'weight_loss_blog']);
+        // // ','type'=>'weight_loss_blog']);
 
-        // Blog::create(['name'=>'10 Changes In Diet To Lose Weight','image'=>'images\blog\wlb4.png','date'=>'November 19,2020','brief'=>'People make a lot of effort to reduce weight. There are different ways to lose weight, and one of the sources to reduce is the proper diet.We bring you the following changes to make in your diet plan to lose weight','content'=>'','type'=>'weight_loss_blog']);
+        Blog::create(['name'=>'10 Changes In Diet To Lose Weight','image'=>'images\blog\wlb4.png','date'=>'November 19,2020','brief'=>'People make a lot of effort to reduce weight. There are different ways to lose weight, and one of the sources to reduce is the proper diet.We bring you the following changes to make in your diet plan to lose weight','content'=>'People make a lot of effort to reduce weight. There are different ways to lose weight, and one of the sources to reduce is the proper diet.
+
+        We bring you the following changes to make in your diet plan to lose weight:
+        
+        Less Sugar
+        Sugar kills us slowly, and that’s the reason we need to reduce the sugar intake in our diet. It is impossible to track the amount of sugar in your diet as the sugar is present in almost everything we take. There are food items like packaged bread, condiments, chips, sauces, and salad dressings that have alarming amounts of sugar.
+        
+        Right Carbs
+        You must take the right carbs in your diet. Carbs do not only mean rice and chapattis, but you should include plenty of Pineapple, Kiwi, Avocado, Mango, Cantaloupe/Musk Melon, Sweet Potato, Artichoke, Asparagus, Cauliflower, Cabbage, Broccoli, Eggplant, Kale, Lettuce, Bell peppers, Celery, Papaya, Sweet peas, Lime, Hearts of Palm, Mushroom, Onion, Tomato, Radishes, Spinach and Zucchini.
+        
+        No Processed food
+        Instead of processed foods, you should include a lot of fruits and vegetables. Junk foods and processed foods should be avoided. Junk food destroys health completely. Remember what you eat is what you are, so include a lot of fresh and healthy food items in your diet plan.
+        
+        Home Cooking
+        You should avoid the outside food as they contain high-level oil, soda and might have been cooked in an unhygienic way. So, it is best to stick with the home cooking as you decide the amount of oil and other things cooked in the hygiene way.
+        
+        Protein
+        Your body needs to have more and more protein. It has been observed that a high protein diet reduces the cravings and obsessive thoughts about food and also the desire for late-night snacks. Food rich in protein is meat, fish and seafood, eggs, plant-based proteins.
+        
+        Include fats
+        If you think that you should not use fats at all to reduce weight, then you are wrong. It is crucial to include healthy fats in your diets like olive oil, coconut oil, Salmon, tuna, dark chocolate, avocado oil, walnuts, and butter.
+        
+        Drink Water
+        You should get into the habit of drinking more and more water. It has also been proved in one of the studies that drinking water half-an-hour before meals is effective in weight loss faster than any other thing.
+        
+        Drink Coffee or Tea
+        One of the studies has also shown that caffeine boosts your metabolism by 3 to 11%. So, you can include coffee and tea regularly though instead of white sugar in tea, you can add jaggery in your tea.
+        
+        Include colours of Rainbow
+        It is necessary to include a variety of colours of fruits and vegetables in your diet plan. It ensures that you are eating a well-rounded diet. In the beginning, you should include at least three different colours on your plate.
+        
+        Replace emotional snacking
+        Control your eating habits when you feel emotional. It is obvious to turn to food whenever you are feeling sad, lonely, or stressed. Some people get to overeat, so it is better to replace the emotional eating into some fun activity or other things to vent out.
+        
+        If your diet is correct, then there will be no problem in reducing weight.','type'=>'weight_loss_blog']);
 
 
 
